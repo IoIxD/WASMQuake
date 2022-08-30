@@ -29,6 +29,17 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #define WINQUAKE_VERSION 0.996
 #define LINUX_VERSION 1.30
 #define X11_VERSION 1.10
+#define WASM_VERISON 1.0
+
+#ifdef __EMSCRIPTEN__
+typedef unsigned char byte;
+#define BYTE_DEFINED 1
+#else
+#if !defined BYTE_DEFINED
+typedef unsigned char byte;
+#define BYTE_DEFINED 1
+#endif
+#endif
 
 // define	PARANOID			// speed sapping error checking
 

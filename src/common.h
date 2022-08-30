@@ -19,9 +19,14 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 // comndef.h  -- general definitions
 
+#ifdef __EMSCRIPTEN__
+typedef unsigned char byte;
+#define BYTE_DEFINED 1
+#else
 #if !defined BYTE_DEFINED
 typedef unsigned char byte;
 #define BYTE_DEFINED 1
+#endif
 #endif
 
 #undef true
