@@ -25,15 +25,15 @@ ARCH=i386
 endif
 NOARCH=noarch
 
-MOUNT_DIR=/grog/Projects/WinQuake
-MASTER_DIR=/grog/Projects/QuakeMaster
+MOUNT_DIR=.
+MASTER_DIR=./build/
 MESA_DIR=/usr/local/src/Mesa-2.6
 TDFXGL_DIR = /home/zoid/3dfxgl
 
 BUILD_DEBUG_DIR=debug$(ARCH)$(GLIBC)
 BUILD_RELEASE_DIR=release$(ARCH)$(GLIBC)
 
-EGCS=/usr/local/egcs-1.1.2/bin/gcc
+EGCS=/usr/lib/emscripten/emcc
 CC=$(EGCS)
 
 BASE_CFLAGS=-Dstricmp=strcasecmp
